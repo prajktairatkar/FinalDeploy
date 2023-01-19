@@ -12,8 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-  apiUrl = 'http://localhost:3000/projectdetails';
-  apiUrl2 = 'http://localhost:3000/resourcedetails';
+  apiUrl = ' http://10.100.253.144:3000/projectdetails';
+  apiUrl2 = ' http://10.100.253.144:3000/resourcedetails';
   apiUrl3 = 'http://localhost:3000/subtask';
 
   httpOptions: { headers: HttpHeaders } = {
@@ -100,12 +100,12 @@ export class ApiService {
 
   //Delete project by ID
   deleteProject(id: number) {
-    return this.http.delete<any>('http://localhost:3000/projectdetails/' + id);
+    return this.http.delete<any>('http://10.100.253.144:3000/projectdetails/' + id);
   }
 
   //Delete Resources by Id
   deleteResource(id: number) {
-    return this.http.delete<any>('http://localhost:3000/resourcedetails/' + id);
+    return this.http.delete<any>('http://10.100.253.144:3000/resourcedetails/' + id);
   }
 
   //Delete Subtask by Id
